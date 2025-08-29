@@ -1,0 +1,630 @@
+<!doctype html>
+<html lang="es">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Ofertas Vinoteca · ¡Descuentos Imperdibles!</title>
+    <meta name="description"
+        content="Página exclusiva de ofertas para vinoteca: vinos tintos, blancos, espumantes y packs ahorro con grandes descuentos." />
+    <style>
+        html {
+            scroll-behavior: smooth;
+        }
+    </style>
+        <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        // Configuración mínima de Tailwind (opcional)
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        brand: {
+                            50: '#faf5ff',
+                            100: '#f3e8ff',
+                            200: '#e9d8fd',
+                            300: '#d8b4fe',
+                            400: '#c084fc',
+                            500: '#a855f7',
+                            600: '#9333ea',
+                            700: '#7e22ce',
+                            800: '#6b21a8',
+                            900: '#581c87',
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <script type="module" src="./index.js"></script>
+</head>
+
+<body class="bg-neutral-50 text-neutral-900">
+    <!-- Header -->
+    <header class="bg-white/90 backdrop-blur supports-[backdrop-filter]:bg-white/80 sticky top-0 z-50 border-b">
+        <div class="max-w-7xl mx-auto px-4 py-3 flex items-center gap-4">
+            <a href="#" class="flex items-center gap-2">
+                <div class="w-10 h-10 rounded-2xl bg-brand-700 grid place-content-center text-white font-bold">VN</div>
+                <span class="font-semibold tracking-wide">Vinoteca Nativa</span>
+            </a>
+            <nav class="ml-4 hidden md:flex gap-2">
+                <a href="#ofertas" class="px-3 py-2 rounded-xl hover:bg-neutral-100">Ofertas</a>
+                <a href="#flash" class="px-3 py-2 rounded-xl hover:bg-neutral-100">Flash</a>
+                <a href="#packs" class="px-3 py-2 rounded-xl hover:bg-neutral-100">Packs</a>
+                <a href="#ultimas" class="px-3 py-2 rounded-xl hover:bg-neutral-100">Últimas unidades</a>
+            </nav>
+            <div class="hidden ms-auto flex-1 max-w-xl">
+                <label class="relative block">
+                    <span class="absolute inset-y-0 left-3 grid place-content-center pointer-events-none">🔎</span>
+                    <input type="search" placeholder="Buscar: Malbec, espumante, bodega…"
+                        class="w-full ps-10 pe-3 py-2 rounded-xl border focus:outline-none focus:ring-2 focus:ring-brand-400" />
+                </label>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero -->
+    <section class="relative overflow-hidden">
+        <div class="max-w-7xl mx-auto px-4 py-10 md:py-16 grid md:grid-cols-2 gap-8 items-center">
+            <div>
+                <span
+                    class="inline-flex items-center gap-2 text-sm bg-brand-100 text-brand-800 px-3 py-1 rounded-full">🔥
+                    Semana del Malbec · Hasta 40% OFF</span>
+                <h1 class="mt-4 text-3xl md:text-5xl font-extrabold leading-tight">
+                    Ofertas exclusivas <span class="text-brand-700">solo por tiempo limitado</span>
+                </h1>
+                <p class="mt-3 text-neutral-700">Aprovechá descuentos en vinos seleccionados, combos especiales y
+                    beneficios para socios del club.</p>
+                <div class="mt-6 flex flex-wrap gap-3">
+                    <a href="#flash"
+                        class="px-5 py-3 rounded-2xl bg-brand-700 text-white hover:bg-brand-800 transition">Ver Ofertas
+                        Flash</a>
+                    <a href="#packs" class="px-5 py-3 rounded-2xl border hover:bg-neutral-100">Packs Ahorro</a>
+                </div>
+            </div>
+            <div class="aspect-[16/11] md:aspect-[5/4] rounded-3xl overflow-hidden shadow-lg">
+                <img src="https://i.pinimg.com/736x/c1/a6/3d/c1a63d9754cbdc5491735a5e983eb01a.jpg"
+                    alt="Copas de vino tinto frente a una cava" class="w-full h-full object-cover" />
+            </div>
+        </div>
+    </section>
+
+    <!-- Ofertas Destacadas -->
+    <section id="ofertas" class="max-w-7xl mx-auto px-4 pt-16">
+        <div class="flex items-end justify-between gap-4">
+            <h2 class="text-2xl md:text-3xl font-bold">Ofertas de la semana</h2>
+            <a href="#" class="text-sm underline underline-offset-4">Ver todo</a>
+        </div>
+
+        <div class="mt-6 grid sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+            <!-- Card template -->
+            <!-- 1 -->
+            <article class="group bg-white rounded-2xl border shadow-sm overflow-hidden relative">
+                <div class="absolute left-3 top-3 z-10">
+                    <span
+                        class="inline-block text-xs font-semibold bg-red-600 text-white px-2 py-1 rounded-full">-35%</span>
+                </div>
+                <div class="aspect-[4/3] overflow-hidden">
+                    <img class="w-full h-full object-cover group-hover:scale-105 transition"
+                        src="https://www.oakandbarrelnyc.com/wp-content/uploads/2015/11/Alma-de-Los-Andes-Malbec-Reserva-2019-750ml-.jpg"
+                        alt="Vino Malbec botella sobre madera" />
+                </div>
+                <div class="p-4">
+                    <h3 class="font-semibold">Malbec Reserva 2019</h3>
+                    <p class="text-sm text-neutral-600">Bodega Andina · 750 ml</p>
+                    <div class="mt-3 flex items-baseline gap-2">
+                        <span class="text-xl font-extrabold">$7.290</span>
+                        <span class="text-sm line-through text-neutral-500">$11.220</span>
+                    </div>
+                    <p class="text-xs text-emerald-700 mt-1">Ahorro $3.930</p>
+                    <div class="mt-4 flex gap-2">
+                        <button
+                            class="hidden flex-1 px-4 py-2 rounded-xl bg-brand-700 text-white hover:bg-brand-800">Comprar por WhatsApp</button>
+                    </div>
+                </div>
+            </article>
+
+            <!-- 2 -->
+            <article class="group bg-white rounded-2xl border shadow-sm overflow-hidden relative">
+                <div class="absolute left-3 top-3 z-10">
+                    <span
+                        class="inline-block text-xs font-semibold bg-red-600 text-white px-2 py-1 rounded-full">-25%</span>
+                </div>
+                <div class="aspect-[4/3] overflow-hidden">
+                    <img class="w-full h-full object-cover group-hover:scale-105 transition"
+                        src="https://bodegasmendoza.com/wp-content/uploads/2020/04/em_chardonay-joven_copa_1080.jpg"
+                        alt="Copa de vino blanco" />
+                </div>
+                <div class="p-4">
+                    <h3 class="font-semibold">Chardonnay Joven</h3>
+                    <p class="text-sm text-neutral-600">Bodega La Loma · 750 ml</p>
+                    <div class="mt-3 flex items-baseline gap-2">
+                        <span class="text-xl font-extrabold">$5.190</span>
+                        <span class="text-sm line-through text-neutral-500">$6.920</span>
+                    </div>
+                    <p class="text-xs text-emerald-700 mt-1">Ahorro $1.730</p>
+                    <div class="mt-4 flex gap-2">
+                        <button
+                            class="hidden flex-1 px-4 py-2 rounded-xl bg-brand-700 text-white hover:bg-brand-800">Comprar por WhatsApp</button>
+                    </div>
+                </div>
+            </article>
+
+            <!-- 3 -->
+            <article class="group bg-white rounded-2xl border shadow-sm overflow-hidden relative">
+                <div class="absolute left-3 top-3 z-10">
+                    <span
+                        class="inline-block text-xs font-semibold bg-purple-600 text-white px-2 py-1 rounded-full">Club
+                        -15%</span>
+                </div>
+                <div class="aspect-[4/3] overflow-hidden">
+                    <img class="w-full h-full object-cover group-hover:scale-105 transition"
+                        src="https://lamiabottega.ec/wp-content/uploads/2024/03/PUNTO-AR-BRUT-NATURE-1-768x979.png"
+                        alt="Dos copas de espumante" />
+                </div>
+                <div class="p-4">
+                    <h3 class="font-semibold">Espumante Brut Nature</h3>
+                    <p class="text-sm text-neutral-600">Bodega del Valle · 750 ml</p>
+                    <div class="mt-3 flex items-baseline gap-2">
+                        <span class="text-xl font-extrabold">$6.750</span>
+                        <span class="text-sm line-through text-neutral-500">$7.940</span>
+                    </div>
+                    <p class="text-xs text-emerald-700 mt-1">Precio club ya aplicado</p>
+                    <div class="mt-4 flex gap-2">
+                        <button
+                            class="hidden flex-1 px-4 py-2 rounded-xl bg-brand-700 text-white hover:bg-brand-800">Comprar por WhatsApp</button>
+                    </div>
+                </div>
+            </article>
+
+            <!-- 4 -->
+            <article class="group bg-white rounded-2xl border shadow-sm overflow-hidden relative">
+                <div class="absolute left-3 top-3 z-10">
+                    <span
+                        class="inline-block text-xs font-semibold bg-red-600 text-white px-2 py-1 rounded-full">-30%</span>
+                </div>
+                <div class="aspect-[4/3] overflow-hidden">
+                    <img class="w-full h-full object-cover group-hover:scale-105 transition"
+                        src="https://nlliquor.com/wp-content/uploads/23686-1.jpg"
+                        alt="Botella de Cabernet Sauvignon" />
+                </div>
+                <div class="p-4">
+                    <h3 class="font-semibold">Cabernet Sauvignon</h3>
+                    <p class="text-sm text-neutral-600">Bodega Piedra Alta · 750 ml</p>
+                    <div class="mt-3 flex items-baseline gap-2">
+                        <span class="text-xl font-extrabold">$6.230</span>
+                        <span class="text-sm line-through text-neutral-500">$8.900</span>
+                    </div>
+                    <p class="text-xs text-emerald-700 mt-1">Ahorro $2.670</p>
+                    <div class="mt-4 flex gap-2">
+                        <button
+                            class="hidden flex-1 px-4 py-2 rounded-xl bg-brand-700 text-white hover:bg-brand-800">Comprar por WhatsApp</button>
+                    </div>
+                </div>
+            </article>
+
+            <!-- 5 -->
+            <article class="group bg-white rounded-2xl border shadow-sm overflow-hidden relative">
+                <div class="absolute left-3 top-3 z-10">
+                    <span
+                        class="inline-block text-xs font-semibold bg-red-600 text-white px-2 py-1 rounded-full">3x2</span>
+                </div>
+                <div class="aspect-[4/3] overflow-hidden">
+                    <img class="w-full h-full object-cover group-hover:scale-105 transition"
+                        src="https://cdn.awsli.com.br/800x800/1316/1316596/produto/235880470/ros--de-verano---frente-gtxk05zyi3.jpeg"
+                        alt="Rosé al atardecer" />
+                </div>
+                <div class="p-4">
+                    <h3 class="font-semibold">Rosé Verano</h3>
+                    <p class="text-sm text-neutral-600">Bodega Laguna · 750 ml</p>
+                    <div class="mt-3 flex items-baseline gap-2">
+                        <span class="text-xl font-extrabold">$4.490</span>
+                        <span class="text-sm text-neutral-500">Llevando 3</span>
+                    </div>
+                    <p class="text-xs text-emerald-700 mt-1">Pagás 2 · 1 gratis</p>
+                    <div class="mt-4 flex gap-2">
+                        <button
+                            class="hidden flex-1 px-4 py-2 rounded-xl bg-brand-700 text-white hover:bg-brand-800">Comprar por WhatsApp</button>
+                    </div>
+                </div>
+            </article>
+
+            <!-- 6 -->
+            <article class="group bg-white rounded-2xl border shadow-sm overflow-hidden relative">
+                <div class="absolute left-3 top-3 z-10">
+                    <span
+                        class="inline-block text-xs font-semibold bg-red-600 text-white px-2 py-1 rounded-full">-20%</span>
+                </div>
+                <div class="aspect-[4/3] overflow-hidden">
+                    <img class="w-full h-full object-cover group-hover:scale-105 transition"
+                        src="https://i5.walmartimages.com/asr/81e5c5e8-b0d2-4985-8025-d9452c0e7ad3.4ce67aa3e5e5475cadf901162dce6616.jpeg"
+                        alt="Vino blanco servido" />
+                </div>
+                <div class="p-4">
+                    <h3 class="font-semibold">Sauvignon Blanc</h3>
+                    <p class="text-sm text-neutral-600">Bodega Costa · 750 ml</p>
+                    <div class="mt-3 flex items-baseline gap-2">
+                        <span class="text-xl font-extrabold">$5.520</span>
+                        <span class="text-sm line-through text-neutral-500">$6.900</span>
+                    </div>
+                    <p class="text-xs text-emerald-700 mt-1">Ahorro $1.380</p>
+                    <div class="mt-4 flex gap-2">
+                        <button
+                            class="hidden flex-1 px-4 py-2 rounded-xl bg-brand-700 text-white hover:bg-brand-800">Comprar por WhatsApp</button>
+                    </div>
+                </div>
+            </article>
+
+            <!-- 7 -->
+            <article class="group bg-white rounded-2xl border shadow-sm overflow-hidden relative">
+                <div class="absolute left-3 top-3 z-10">
+                    <span
+                        class="inline-block text-xs font-semibold bg-red-600 text-white px-2 py-1 rounded-full">-40%</span>
+                </div>
+                <div class="aspect-[4/3] overflow-hidden">
+                    <img class="w-full h-full object-cover group-hover:scale-105 transition"
+                        src="https://static.specsonline.com/wp-content/uploads/2022/08/089459700202.jpg"
+                        alt="Vino tinto premium" />
+                </div>
+                <div class="p-4">
+                    <h3 class="font-semibold">Blend Gran Corte</h3>
+                    <p class="text-sm text-neutral-600">Bodega Norte · 750 ml</p>
+                    <div class="mt-3 flex items-baseline gap-2">
+                        <span class="text-xl font-extrabold">$11.940</span>
+                        <span class="text-sm line-through text-neutral-500">$19.900</span>
+                    </div>
+                    <p class="text-xs text-emerald-700 mt-1">Ahorro $7.960</p>
+                    <div class="mt-4 flex gap-2">
+                        <button
+                            class="hidden flex-1 px-4 py-2 rounded-xl bg-brand-700 text-white hover:bg-brand-800">Comprar por WhatsApp</button>
+                    </div>
+                </div>
+            </article>
+
+            <!-- 8 -->
+            <article class="group bg-white rounded-2xl border shadow-sm overflow-hidden relative">
+                <div class="absolute left-3 top-3 z-10">
+                    <span
+                        class="inline-block text-xs font-semibold bg-red-600 text-white px-2 py-1 rounded-full">-18%</span>
+                </div>
+                <div class="aspect-[4/3] overflow-hidden">
+                    <img class="w-full h-full object-cover group-hover:scale-105 transition"
+                        src="https://bodegamiamiga.b-cdn.net/wp-content/uploads/2024/07/MOILLARD-BOURGOGNE-PINOT-NOIR-750-ML.jpg"
+                        alt="Cava con botellas" />
+                </div>
+                <div class="p-4">
+                    <h3 class="font-semibold">Pinot Noir</h3>
+                    <p class="text-sm text-neutral-600">Bodega Sur · 750 ml</p>
+                    <div class="mt-3 flex items-baseline gap-2">
+                        <span class="text-xl font-extrabold">$8.440</span>
+                        <span class="text-sm line-through text-neutral-500">$10.300</span>
+                    </div>
+                    <p class="text-xs text-emerald-700 mt-1">Ahorro $1.860</p>
+                    <div class="mt-4 flex gap-2">
+                        <button
+                            class="hidden flex-1 px-4 py-2 rounded-xl bg-brand-700 text-white hover:bg-brand-800">Comprar por WhatsApp</button>
+                    </div>
+                </div>
+            </article>
+        </div>
+    </section>
+
+    <!-- Ofertas Flash -->
+    <section id="flash" class="bg-gradient-to-b from-white pt-10 to-brand-50/40 border-y">
+        <div class="max-w-7xl mx-auto px-4 py-10">
+            <div class="flex items-end justify-between gap-4">
+                <h2 class="text-2xl md:text-3xl font-bold">Ofertas Flash (24 hs)</h2>
+                <span class="text-sm bg-black text-white px-2.5 py-1 rounded-full">Stock limitado</span>
+            </div>
+
+            <div class="mt-6 grid sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+                <!-- Flash item 1 -->
+                <article class="bg-white rounded-2xl border shadow-sm overflow-hidden">
+                    <div class="aspect-[4/3] overflow-hidden">
+                        <img class="w-full h-full object-cover"
+                            src="https://www.riojaalta.com.br/wp-content/uploads/2018/12/Trumpeter-Malbec-1024x1024.jpg"
+                            alt="Vino tinto con etiqueta negra" />
+                    </div>
+                    <div class="p-4">
+                        <h3 class="font-semibold">Malbec Clásico</h3>
+                        <p class="text-sm text-neutral-600">2x1 · Hoy</p>
+                        <div class="mt-3 flex items-baseline gap-2">
+                            <span class="text-xl font-extrabold">$5.990</span>
+                            <span class="text-sm line-through text-neutral-500">$11.980</span>
+                        </div>
+                        <button
+                            class="hidden mt-4 w-full px-4 py-2 rounded-xl bg-black text-white hover:opacity-90">Comprar por WhatsApp</button>
+                    </div>
+                </article>
+
+                <!-- Flash item 2 -->
+                <article class="bg-white rounded-2xl border shadow-sm overflow-hidden">
+                    <div class="aspect-[4/3] overflow-hidden">
+                        <img class="w-full h-full object-cover"
+                            src="https://www.vinodalproduttore.it/wp-content/uploads/2023/05/Bonarda-Prodigo.png"
+                            alt="Copa de vino y botellas" />
+                    </div>
+                    <div class="p-4">
+                        <h3 class="font-semibold">Bonarda Selección</h3>
+                        <p class="text-sm text-neutral-600">-28% · Solo online</p>
+                        <div class="mt-3 flex items-baseline gap-2">
+                            <span class="text-xl font-extrabold">$6.840</span>
+                            <span class="text-sm line-through text-neutral-500">$9.500</span>
+                        </div>
+                        <button
+                            class="hidden mt-4 w-full px-4 py-2 rounded-xl bg-black text-white hover:opacity-90">Comprar por WhatsApp</button>
+                    </div>
+                </article>
+
+                <!-- Flash item 3 -->
+                <article class="bg-white rounded-2xl border shadow-sm overflow-hidden">
+                    <div class="aspect-[4/3] overflow-hidden">
+                        <img class="w-full h-full object-cover"
+                            src="https://images.tcdn.com.br/img/img_prod/761744/espumante_freixenet_premiun_cava_rose_2439_1_8e3692e816add0802ceb1fa1cc7e7552.png"
+                            alt="Espumante rosado" />
+                    </div>
+                    <div class="p-4">
+                        <h3 class="font-semibold">Espumante Rosé</h3>
+                        <p class="text-sm text-neutral-600">-22% · Exclusivo</p>
+                        <div class="mt-3 flex items-baseline gap-2">
+                            <span class="text-xl font-extrabold">$7.020</span>
+                            <span class="text-sm line-through text-neutral-500">$9.000</span>
+                        </div>
+                        <button
+                            class="hidden mt-4 w-full px-4 py-2 rounded-xl bg-black text-white hover:opacity-90">Comprar por WhatsApp</button>
+                    </div>
+                </article>
+
+                <!-- Flash item 4 -->
+                <article class="bg-white rounded-2xl border shadow-sm overflow-hidden">
+                    <div class="aspect-[4/3] overflow-hidden">
+                        <img class="w-full h-full object-cover"
+                            src="https://entrevinosylicores.cl/wp-content/uploads/2021/04/Korta-Syrah-Reserva-1-600x600.jpg"
+                            alt="Copas brindando" />
+                    </div>
+                    <div class="p-4">
+                        <h3 class="font-semibold">Syrah Reserva</h3>
+                        <p class="text-sm text-neutral-600">-33% · Últimas 40 u.</p>
+                        <div class="mt-3 flex items-baseline gap-2">
+                            <span class="text-xl font-extrabold">$8.020</span>
+                            <span class="text-sm line-through text-neutral-500">$11.970</span>
+                        </div>
+                        <button
+                            class="hidden mt-4 w-full px-4 py-2 rounded-xl bg-black text-white hover:opacity-90">Comprar por WhatsApp</button>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <!-- Packs Ahorro -->
+    <section id="packs" class="max-w-7xl mx-auto px-4 pt-16">
+        <div class="flex items-end justify-between gap-4">
+            <h2 class="text-2xl md:text-3xl font-bold">Packs ahorro</h2>
+            <span class="text-sm bg-brand-200 text-brand-900 px-2.5 py-1 rounded-full">Mejor relación
+                precio/calidad</span>
+        </div>
+
+        <div class="mt-6 grid md:grid-cols-2 xl:grid-cols-3 gap-6">
+            <!-- Pack 1 -->
+            <article class="bg-white rounded-2xl border shadow-sm overflow-hidden flex flex-col">
+                <div class="aspect-[16/8] overflow-hidden">
+                    <img class="w-full h-full object-cover"
+                        src="https://dcdn.mitiendanube.com/stores/001/420/247/products/trapiche-terroir-series-orellana1-b7a09324bf42ff41f016480572706437-640-0.jpg"
+                        alt="Pack de vinos tintos" />
+                </div>
+                <div class="p-5 flex-1 flex flex-col">
+                    <h3 class="font-semibold text-lg">Pack Malbec x6 · Selección Parrilla</h3>
+                    <ul class="mt-2 text-sm text-neutral-700 list-disc list-inside space-y-1">
+                        <li>6 botellas · bodegas variadas</li>
+                        <li>Notas de ciruela, vainilla y cacao</li>
+                        <li>Incluye caja premium</li>
+                    </ul>
+                    <div class="mt-4 flex items-baseline gap-2">
+                        <span class="text-2xl font-extrabold">$39.900</span>
+                        <span class="text-sm line-through text-neutral-500">$56.700</span>
+                    </div>
+                    <p class="text-xs text-emerald-700">Ahorro $16.800</p>
+                    <div class="mt-5 grid grid-cols-2 gap-2">
+                        <button class="hidden px-4 py-2 rounded-xl bg-brand-700 text-white hover:bg-brand-800">Comprar por WhatsApp</button>
+                        <button class="px-4 py-2 rounded-xl border hover:bg-neutral-100">Detalles</button>
+                    </div>
+                </div>
+            </article>
+
+            <!-- Pack 2 -->
+            <article class="bg-white rounded-2xl border shadow-sm overflow-hidden flex flex-col">
+                <div class="aspect-[16/8] overflow-hidden">
+                    <img class="w-full h-full object-cover"
+                        src="https://www.thewinecentre.ie/wp-content/uploads/2023/09/83234.jpg"
+                        alt="Pack vinos blancos" />
+                </div>
+                <div class="p-5 flex-1 flex flex-col">
+                    <h3 class="font-semibold text-lg">Pack Blancos x3 · Frescos</h3>
+                    <ul class="mt-2 text-sm text-neutral-700 list-disc list-inside space-y-1">
+                        <li>2x Sauvignon + 1x Chardonnay</li>
+                        <li>Perfectos para maridar pescados</li>
+                        <li>Entrega 24/48 hs</li>
+                    </ul>
+                    <div class="mt-4 flex items-baseline gap-2">
+                        <span class="text-2xl font-extrabold">$16.450</span>
+                        <span class="text-sm line-through text-neutral-500">$21.000</span>
+                    </div>
+                    <p class="text-xs text-emerald-700">Ahorro $4.550</p>
+                    <div class="mt-5 grid grid-cols-2 gap-2">
+                        <button class="hidden px-4 py-2 rounded-xl bg-brand-700 text-white hover:bg-brand-800">Comprar por WhatsApp</button>
+                        <button class="px-4 py-2 rounded-xl border hover:bg-neutral-100">Detalles</button>
+                    </div>
+                </div>
+            </article>
+
+            <!-- Pack 3 -->
+            <article class="bg-white rounded-2xl border shadow-sm overflow-hidden flex flex-col">
+                <div class="aspect-[16/8] overflow-hidden">
+                    <img class="w-full h-full object-cover"
+                        src="https://licorerias.com.pe/wp-content/uploads/2024/10/pack-Espumante-Extra-Brut-Martini-Prosecco-Botella-750ml-PACK-X4-6copas.jpg"
+                        alt="Pack espumantes" />
+                </div>
+                <div class="p-5 flex-1 flex flex-col">
+                    <h3 class="font-semibold text-lg">Pack Brindis x4 · Espumantes</h3>
+                    <ul class="mt-2 text-sm text-neutral-700 list-disc list-inside space-y-1">
+                        <li>2x Brut · 2x Extra Brut</li>
+                        <li>Incluye 2 copas de regalo</li>
+                        <li>Hasta 6 cuotas sin interés</li>
+                    </ul>
+                    <div class="mt-4 flex items-baseline gap-2">
+                        <span class="text-2xl font-extrabold">$28.990</span>
+                        <span class="text-sm line-through text-neutral-500">$34.800</span>
+                    </div>
+                    <p class="text-xs text-emerald-700">Ahorro $5.810</p>
+                    <div class="mt-5 grid grid-cols-2 gap-2">
+                        <button class="hidden px-4 py-2 rounded-xl bg-brand-700 text-white hover:bg-brand-800">Comprar por WhatsApp</button>
+                        <button class="px-4 py-2 rounded-xl border hover:bg-neutral-100">Detalles</button>
+                    </div>
+                </div>
+            </article>
+        </div>
+    </section>
+
+    <!-- Últimas Unidades -->
+    <section id="ultimas" class="max-w-7xl mx-auto px-4 pt-16">
+        <div class="flex items-end justify-between gap-4">
+            <h2 class="text-2xl md:text-3xl font-bold">Últimas unidades</h2>
+            <span class="text-sm bg-red-600 text-white px-2.5 py-1 rounded-full">¡Se van!</span>
+        </div>
+
+        <div class="mt-6 grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+            <!-- 3 items -->
+            <article class="bg-white rounded-2xl border shadow-sm overflow-hidden">
+                <div class="aspect-[4/3] overflow-hidden">
+                    <img class="w-full h-full object-cover"
+                        src="https://www.conceptomk.cl/wp-content/uploads/2024/10/IMG_5547-003-600x600.jpg"
+                        alt="Vino tinto premium en caja" />
+                </div>
+                <div class="p-4">
+                    <h3 class="font-semibold">Gran Reserva 2017</h3>
+                    <p class="text-sm text-neutral-600">Últimas 12 unidades</p>
+                    <div class="mt-3 flex items-baseline gap-2">
+                        <span class="text-xl font-extrabold">$14.900</span>
+                    </div>
+                    <button
+                        class="hidden mt-4 w-full px-4 py-2 rounded-xl bg-brand-700 text-white hover:bg-brand-800">Comprar por WhatsApp</button>
+                </div>
+            </article>
+
+            <article class="bg-white rounded-2xl border shadow-sm overflow-hidden">
+                <div class="aspect-[4/3] overflow-hidden">
+                    <img class="w-full h-full object-cover"
+                        src="https://revistaadega.uol.com.br/media/_versions/garrafas/vina_albali_tempranillo_roble_2021_sm.jpg"
+                        alt="Cava con copas" />
+                </div>
+                <div class="p-4">
+                    <h3 class="font-semibold">Tempranillo Roble</h3>
+                    <p class="text-sm text-neutral-600">Últimas 8 unidades</p>
+                    <div class="mt-3 flex items-baseline gap-2">
+                        <span class="text-xl font-extrabold">$9.990</span>
+                    </div>
+                    <button
+                        class="hidden mt-4 w-full px-4 py-2 rounded-xl bg-brand-700 text-white hover:bg-brand-800">Comprar por WhatsApp</button>
+                </div>
+            </article>
+
+            <article class="bg-white rounded-2xl border shadow-sm overflow-hidden">
+                <div class="aspect-[4/3] overflow-hidden">
+                    <img class="w-full h-full object-cover"
+                        src="https://luigibosca.com/wp-content/uploads/2022/12/Dia-del-Cabernet-Franc-1.jpg"
+                        alt="Barriles de roble" />
+                </div>
+                <div class="p-4">
+                    <h3 class="font-semibold">Cabernet Franc</h3>
+                    <p class="text-sm text-neutral-600">Últimas 5 unidades</p>
+                    <div class="mt-3 flex items-baseline gap-2">
+                        <span class="text-xl font-extrabold">$12.450</span>
+                    </div>
+                    <button
+                        class="hidden mt-4 w-full px-4 py-2 rounded-xl bg-brand-700 text-white hover:bg-brand-800">Comprar por WhatsApp</button>
+                </div>
+            </article>
+        </div>
+    </section>
+
+    <!-- FORMULARIO WHATSAPP -->
+    <section id="whatsapp" class="bg-brand-50 py-16">
+        <div class="max-w-3xl mx-auto px-4 text-center">
+            <h3 class="text-2xl font-bold mb-6">Escríbeme por WhatsApp</h3>
+            <p class="text-gray-600 mb-8">
+                Completa el formulario y te responderé lo antes posible 🍷
+            </p>
+            <form id="whatsappForm" class="space-y-6">
+                <input type="text" id="nombre" placeholder="Tu nombre"
+                    class="w-full p-4 rounded-xl border focus:ring-2 focus:ring-indigo-500 focus:outline-none" required>
+
+                <input type="text" id="promocion" placeholder="Nombre o promoción de vinos"
+                    class="w-full p-4 rounded-xl border focus:ring-2 focus:ring-indigo-500 focus:outline-none" required>
+
+                <textarea id="mensaje" placeholder="Escribe tu mensaje..."
+                    class="w-full p-4 rounded-xl border focus:ring-2 focus:ring-indigo-500 focus:outline-none" rows="4"
+                    required></textarea>
+
+                <button type="submit"
+                    class="bg-brand-600 text-white px-6 py-3 rounded-xl shadow hover:bg-brand-700 transition w-full">
+                    Enviar a WhatsApp
+                </button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-neutral-950 text-neutral-100 mt-10">
+        <div class="max-w-7xl mx-auto px-4 py-10 grid md:grid-cols-4 gap-8">
+            <div>
+                <div class="flex items-center gap-2">
+                    <div class="w-10 h-10 rounded-2xl bg-brand-600 grid place-content-center text-white font-bold">VN
+                    </div>
+                    <span class="font-semibold tracking-wide">Vinoteca Nativa</span>
+                </div>
+                <p class="mt-3 text-sm text-neutral-300">Especialistas en vinos argentinos. Atención personalizada y
+                    envíos a todo el país.</p>
+            </div>
+            <div>
+                <h4 class="font-semibold mb-2">Secciones</h4>
+                <ul class="space-y-1 text-sm text-neutral-300">
+                    <li><a class="hover:underline" href="#ofertas">Ofertas</a></li>
+                    <li><a class="hover:underline" href="#flash">Ofertas Flash</a></li>
+                    <li><a class="hover:underline" href="#packs">Packs Ahorro</a></li>
+                    <li><a class="hover:underline" href="#ultimas">Últimas unidades</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4 class="font-semibold mb-2">Ayuda</h4>
+                <ul class="space-y-1 text-sm text-neutral-300">
+                    <li>Medios de pago</li>
+                    <li>Devoluciones</li>
+                    <li class="font-semibold py-2">Contactos:</li>
+                    <li>Facebook</li>
+                    <li>Instagram</li>
+                    <li>X</li>
+                </ul>
+            </div>
+            <div>
+                <h4 class="font-semibold mb-2">Suscribite</h4>
+                <p class="text-sm text-neutral-300">Promos exclusivas y novedades</p>
+                <form class="mt-3 flex gap-2">
+                    <input type="email" placeholder="tu@email.com"
+                        class="flex-1 px-3 py-2 rounded-xl bg-neutral-800 border border-neutral-700 focus:outline-none" />
+                    <button class="px-4 py-2 rounded-xl bg-brand-600 text-white hover:bg-brand-700">Enviar</button>
+                </form>
+            </div>
+        </div>
+        <div class="border-t border-neutral-800">
+            <div
+                class="max-w-7xl mx-auto px-4 py-4 text-xs text-neutral-400 flex flex-wrap items-center gap-2 justify-between">
+                <p>© 2025 Vinoteca Nativa. Todos los derechos reservados.</p>
+                <p class="opacity-80">Beber con moderación. Prohibida su venta a menores de 18 años.</p>
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>
