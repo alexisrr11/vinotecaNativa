@@ -12,7 +12,7 @@
             scroll-behavior: smooth;
         }
     </style>
-        <!-- Tailwind CSS CDN -->
+    <!-- Tailwind CSS CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
         // Configuración mínima de Tailwind (opcional)
@@ -44,16 +44,30 @@
     <!-- Header -->
     <header class="bg-white/90 backdrop-blur supports-[backdrop-filter]:bg-white/80 sticky top-0 z-50 border-b">
         <div class="max-w-7xl mx-auto px-4 py-3 flex items-center gap-4">
+            <!-- Logo -->
             <a href="#" class="flex items-center gap-2">
-                <div class="w-10 h-10 rounded-2xl bg-brand-700 grid place-content-center text-white font-bold">VN</div>
+                <div class="w-10 h-10 rounded-2xl bg-brand-700 grid place-content-center text-white font-bold">
+                    VN
+                </div>
                 <span class="font-semibold tracking-wide">Vinoteca Nativa</span>
             </a>
-            <nav class="ml-4 hidden md:flex gap-2">
-                <a href="#ofertas" class="px-3 py-2 rounded-xl hover:bg-neutral-100">Ofertas</a>
-                <a href="#flash" class="px-3 py-2 rounded-xl hover:bg-neutral-100">Flash</a>
-                <a href="#packs" class="px-3 py-2 rounded-xl hover:bg-neutral-100">Packs</a>
-                <a href="#ultimas" class="px-3 py-2 rounded-xl hover:bg-neutral-100">Últimas unidades</a>
+
+            <!-- Botón hamburguesa (solo móvil) -->
+            <button id="menu-toggle" class="ms-auto md:hidden p-2 rounded-xl hover:bg-neutral-100 focus:outline-none">
+                ☰
+            </button>
+
+            <!-- Menu de navegación -->
+            <nav id="menu"
+                class="absolute top-full left-0 w-full bg-white border-b md:border-none md:static md:w-auto md:flex md:gap-2 hidden">
+                <a href="#ofertas" class="block px-3 py-2 rounded-xl hover:bg-neutral-100">Ofertas</a>
+                <a href="#flash" class="block px-3 py-2 rounded-xl hover:bg-neutral-100">Flash</a>
+                <a href="#packs" class="block px-3 py-2 rounded-xl hover:bg-neutral-100">Packs</a>
+                <a href="#ultimas" class="block px-3 py-2 rounded-xl hover:bg-neutral-100">Últimas
+                    unidades</a>
             </nav>
+
+            <!-- Buscador -->
             <div class="hidden ms-auto flex-1 max-w-xl">
                 <label class="relative block">
                     <span class="absolute inset-y-0 left-3 grid place-content-center pointer-events-none">🔎</span>
@@ -63,6 +77,14 @@
             </div>
         </div>
     </header>
+
+    <!-- Modal oculto -->
+    <div id="modal" class="hidden fixed inset-0 bg-black bg-opacity-70 flex items-center justify-center z-50">
+        <div class="relative">
+            <img id="modal-img" src="" alt="Imagen ampliada" class="max-h-[80vh] rounded shadow-lg">
+            <button id="closeModal" class="absolute top-2 right-2 bg-white rounded-full px-3 py-1 text-black">X</button>
+        </div>
+    </div>
 
     <!-- Hero -->
     <section class="relative overflow-hidden">
@@ -120,7 +142,8 @@
                     <p class="text-xs text-emerald-700 mt-1">Ahorro $3.930</p>
                     <div class="mt-4 flex gap-2">
                         <button
-                            class="hidden flex-1 px-4 py-2 rounded-xl bg-brand-700 text-white hover:bg-brand-800">Comprar por WhatsApp</button>
+                            class="hidden flex-1 px-4 py-2 rounded-xl bg-brand-700 text-white hover:bg-brand-800">Comprar
+                            por WhatsApp</button>
                     </div>
                 </div>
             </article>
@@ -146,7 +169,8 @@
                     <p class="text-xs text-emerald-700 mt-1">Ahorro $1.730</p>
                     <div class="mt-4 flex gap-2">
                         <button
-                            class="hidden flex-1 px-4 py-2 rounded-xl bg-brand-700 text-white hover:bg-brand-800">Comprar por WhatsApp</button>
+                            class="hidden flex-1 px-4 py-2 rounded-xl bg-brand-700 text-white hover:bg-brand-800">Comprar
+                            por WhatsApp</button>
                     </div>
                 </div>
             </article>
@@ -173,7 +197,8 @@
                     <p class="text-xs text-emerald-700 mt-1">Precio club ya aplicado</p>
                     <div class="mt-4 flex gap-2">
                         <button
-                            class="hidden flex-1 px-4 py-2 rounded-xl bg-brand-700 text-white hover:bg-brand-800">Comprar por WhatsApp</button>
+                            class="hidden flex-1 px-4 py-2 rounded-xl bg-brand-700 text-white hover:bg-brand-800">Comprar
+                            por WhatsApp</button>
                     </div>
                 </div>
             </article>
@@ -186,8 +211,7 @@
                 </div>
                 <div class="aspect-[4/3] overflow-hidden">
                     <img class="w-full h-full object-cover group-hover:scale-105 transition"
-                        src="https://nlliquor.com/wp-content/uploads/23686-1.jpg"
-                        alt="Botella de Cabernet Sauvignon" />
+                        src="https://nlliquor.com/wp-content/uploads/23686-1.jpg" alt="Botella de Cabernet Sauvignon" />
                 </div>
                 <div class="p-4">
                     <h3 class="font-semibold">Cabernet Sauvignon</h3>
@@ -199,7 +223,8 @@
                     <p class="text-xs text-emerald-700 mt-1">Ahorro $2.670</p>
                     <div class="mt-4 flex gap-2">
                         <button
-                            class="hidden flex-1 px-4 py-2 rounded-xl bg-brand-700 text-white hover:bg-brand-800">Comprar por WhatsApp</button>
+                            class="hidden flex-1 px-4 py-2 rounded-xl bg-brand-700 text-white hover:bg-brand-800">Comprar
+                            por WhatsApp</button>
                     </div>
                 </div>
             </article>
@@ -225,7 +250,8 @@
                     <p class="text-xs text-emerald-700 mt-1">Pagás 2 · 1 gratis</p>
                     <div class="mt-4 flex gap-2">
                         <button
-                            class="hidden flex-1 px-4 py-2 rounded-xl bg-brand-700 text-white hover:bg-brand-800">Comprar por WhatsApp</button>
+                            class="hidden flex-1 px-4 py-2 rounded-xl bg-brand-700 text-white hover:bg-brand-800">Comprar
+                            por WhatsApp</button>
                     </div>
                 </div>
             </article>
@@ -251,7 +277,8 @@
                     <p class="text-xs text-emerald-700 mt-1">Ahorro $1.380</p>
                     <div class="mt-4 flex gap-2">
                         <button
-                            class="hidden flex-1 px-4 py-2 rounded-xl bg-brand-700 text-white hover:bg-brand-800">Comprar por WhatsApp</button>
+                            class="hidden flex-1 px-4 py-2 rounded-xl bg-brand-700 text-white hover:bg-brand-800">Comprar
+                            por WhatsApp</button>
                     </div>
                 </div>
             </article>
@@ -277,7 +304,8 @@
                     <p class="text-xs text-emerald-700 mt-1">Ahorro $7.960</p>
                     <div class="mt-4 flex gap-2">
                         <button
-                            class="hidden flex-1 px-4 py-2 rounded-xl bg-brand-700 text-white hover:bg-brand-800">Comprar por WhatsApp</button>
+                            class="hidden flex-1 px-4 py-2 rounded-xl bg-brand-700 text-white hover:bg-brand-800">Comprar
+                            por WhatsApp</button>
                     </div>
                 </div>
             </article>
@@ -303,7 +331,8 @@
                     <p class="text-xs text-emerald-700 mt-1">Ahorro $1.860</p>
                     <div class="mt-4 flex gap-2">
                         <button
-                            class="hidden flex-1 px-4 py-2 rounded-xl bg-brand-700 text-white hover:bg-brand-800">Comprar por WhatsApp</button>
+                            class="hidden flex-1 px-4 py-2 rounded-xl bg-brand-700 text-white hover:bg-brand-800">Comprar
+                            por WhatsApp</button>
                     </div>
                 </div>
             </article>
@@ -334,7 +363,8 @@
                             <span class="text-sm line-through text-neutral-500">$11.980</span>
                         </div>
                         <button
-                            class="hidden mt-4 w-full px-4 py-2 rounded-xl bg-black text-white hover:opacity-90">Comprar por WhatsApp</button>
+                            class="hidden mt-4 w-full px-4 py-2 rounded-xl bg-black text-white hover:opacity-90">Comprar
+                            por WhatsApp</button>
                     </div>
                 </article>
 
@@ -353,7 +383,8 @@
                             <span class="text-sm line-through text-neutral-500">$9.500</span>
                         </div>
                         <button
-                            class="hidden mt-4 w-full px-4 py-2 rounded-xl bg-black text-white hover:opacity-90">Comprar por WhatsApp</button>
+                            class="hidden mt-4 w-full px-4 py-2 rounded-xl bg-black text-white hover:opacity-90">Comprar
+                            por WhatsApp</button>
                     </div>
                 </article>
 
@@ -372,7 +403,8 @@
                             <span class="text-sm line-through text-neutral-500">$9.000</span>
                         </div>
                         <button
-                            class="hidden mt-4 w-full px-4 py-2 rounded-xl bg-black text-white hover:opacity-90">Comprar por WhatsApp</button>
+                            class="hidden mt-4 w-full px-4 py-2 rounded-xl bg-black text-white hover:opacity-90">Comprar
+                            por WhatsApp</button>
                     </div>
                 </article>
 
@@ -391,7 +423,8 @@
                             <span class="text-sm line-through text-neutral-500">$11.970</span>
                         </div>
                         <button
-                            class="hidden mt-4 w-full px-4 py-2 rounded-xl bg-black text-white hover:opacity-90">Comprar por WhatsApp</button>
+                            class="hidden mt-4 w-full px-4 py-2 rounded-xl bg-black text-white hover:opacity-90">Comprar
+                            por WhatsApp</button>
                     </div>
                 </article>
             </div>
@@ -416,7 +449,7 @@
                 </div>
                 <div class="p-5 flex-1 flex flex-col">
                     <h3 class="font-semibold text-lg">Pack Malbec x6 · Selección Parrilla</h3>
-                    <ul class="mt-2 text-sm text-neutral-700 list-disc list-inside space-y-1">
+                    <ul id="detaMalbecX6" class="hidden mt-2 text-sm text-neutral-700 list-disc list-inside space-y-1">
                         <li>6 botellas · bodegas variadas</li>
                         <li>Notas de ciruela, vainilla y cacao</li>
                         <li>Incluye caja premium</li>
@@ -427,8 +460,9 @@
                     </div>
                     <p class="text-xs text-emerald-700">Ahorro $16.800</p>
                     <div class="mt-5 grid grid-cols-2 gap-2">
-                        <button class="hidden px-4 py-2 rounded-xl bg-brand-700 text-white hover:bg-brand-800">Comprar por WhatsApp</button>
-                        <button class="px-4 py-2 rounded-xl border hover:bg-neutral-100">Detalles</button>
+                        <button class="hidden px-4 py-2 rounded-xl bg-brand-700 text-white hover:bg-brand-800">Comprar
+                            por WhatsApp</button>
+                        <button id="botonMalbecX6" class="px-4 py-2 rounded-xl border hover:bg-neutral-100">Ver detalles</button>
                     </div>
                 </div>
             </article>
@@ -442,7 +476,7 @@
                 </div>
                 <div class="p-5 flex-1 flex flex-col">
                     <h3 class="font-semibold text-lg">Pack Blancos x3 · Frescos</h3>
-                    <ul class="mt-2 text-sm text-neutral-700 list-disc list-inside space-y-1">
+                    <ul id="detaBlancos" class="hidden mt-2 text-sm text-neutral-700 list-disc list-inside space-y-1">
                         <li>2x Sauvignon + 1x Chardonnay</li>
                         <li>Perfectos para maridar pescados</li>
                         <li>Entrega 24/48 hs</li>
@@ -453,8 +487,9 @@
                     </div>
                     <p class="text-xs text-emerald-700">Ahorro $4.550</p>
                     <div class="mt-5 grid grid-cols-2 gap-2">
-                        <button class="hidden px-4 py-2 rounded-xl bg-brand-700 text-white hover:bg-brand-800">Comprar por WhatsApp</button>
-                        <button class="px-4 py-2 rounded-xl border hover:bg-neutral-100">Detalles</button>
+                        <button class="hidden px-4 py-2 rounded-xl bg-brand-700 text-white hover:bg-brand-800">Comprar
+                            por WhatsApp</button>
+                        <button id="botonBlancos" class="px-4 py-2 rounded-xl border hover:bg-neutral-100">Ver detalles</button>
                     </div>
                 </div>
             </article>
@@ -468,7 +503,7 @@
                 </div>
                 <div class="p-5 flex-1 flex flex-col">
                     <h3 class="font-semibold text-lg">Pack Brindis x4 · Espumantes</h3>
-                    <ul class="mt-2 text-sm text-neutral-700 list-disc list-inside space-y-1">
+                    <ul id="detaEspumantes" class="hidden mt-2 text-sm text-neutral-700 list-disc list-inside space-y-1">
                         <li>2x Brut · 2x Extra Brut</li>
                         <li>Incluye 2 copas de regalo</li>
                         <li>Hasta 6 cuotas sin interés</li>
@@ -479,8 +514,9 @@
                     </div>
                     <p class="text-xs text-emerald-700">Ahorro $5.810</p>
                     <div class="mt-5 grid grid-cols-2 gap-2">
-                        <button class="hidden px-4 py-2 rounded-xl bg-brand-700 text-white hover:bg-brand-800">Comprar por WhatsApp</button>
-                        <button class="px-4 py-2 rounded-xl border hover:bg-neutral-100">Detalles</button>
+                        <button class="hidden px-4 py-2 rounded-xl bg-brand-700 text-white hover:bg-brand-800">Comprar
+                            por WhatsApp</button>
+                        <button id="botonEspumantes" class="px-4 py-2 rounded-xl border hover:bg-neutral-100">Ver detalles</button>
                     </div>
                 </div>
             </article>
@@ -509,7 +545,8 @@
                         <span class="text-xl font-extrabold">$14.900</span>
                     </div>
                     <button
-                        class="hidden mt-4 w-full px-4 py-2 rounded-xl bg-brand-700 text-white hover:bg-brand-800">Comprar por WhatsApp</button>
+                        class="hidden mt-4 w-full px-4 py-2 rounded-xl bg-brand-700 text-white hover:bg-brand-800">Comprar
+                        por WhatsApp</button>
                 </div>
             </article>
 
@@ -526,7 +563,8 @@
                         <span class="text-xl font-extrabold">$9.990</span>
                     </div>
                     <button
-                        class="hidden mt-4 w-full px-4 py-2 rounded-xl bg-brand-700 text-white hover:bg-brand-800">Comprar por WhatsApp</button>
+                        class="hidden mt-4 w-full px-4 py-2 rounded-xl bg-brand-700 text-white hover:bg-brand-800">Comprar
+                        por WhatsApp</button>
                 </div>
             </article>
 
@@ -543,7 +581,8 @@
                         <span class="text-xl font-extrabold">$12.450</span>
                     </div>
                     <button
-                        class="hidden mt-4 w-full px-4 py-2 rounded-xl bg-brand-700 text-white hover:bg-brand-800">Comprar por WhatsApp</button>
+                        class="hidden mt-4 w-full px-4 py-2 rounded-xl bg-brand-700 text-white hover:bg-brand-800">Comprar
+                        por WhatsApp</button>
                 </div>
             </article>
         </div>
